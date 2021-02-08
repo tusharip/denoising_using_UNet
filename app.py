@@ -10,7 +10,7 @@ import cv2
 import base64
 
 torch.hub.download_url_to_file('https://www.dropbox.com/s/npligq2zx3rnuxy/model.pt?dl=1', './weight.pt')
-weights = './model.pt'
+weights = './weight.pt'
 
 imgsz   = 512
 
