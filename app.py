@@ -8,8 +8,10 @@ import flask
 from flask import Flask,request,jsonify,url_for,render_template
 import cv2
 import base64
-
-torch.hub.download_url_to_file('https://www.dropbox.com/s/npligq2zx3rnuxy/model.pt?dl=1', './weight.pt')
+if os.path.isfile("./weight.pt"):
+    pass
+else:
+    torch.hub.download_url_to_file('https://www.dropbox.com/s/npligq2zx3rnuxy/model.pt?dl=1', './weight.pt')
 weights = './weight.pt'
 
 imgsz   = 512
