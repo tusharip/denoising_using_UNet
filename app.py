@@ -9,6 +9,7 @@ from flask import Flask,request,jsonify,url_for,render_template
 import cv2
 import base64
 
+torch.hub.download_url_to_file('https://www.dropbox.com/s/fvwei51fgepl9zu/parameters.pt?dl=1', './weight.pt')
 weights = './model.pt'
 
 imgsz   = 512
